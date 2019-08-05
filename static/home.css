@@ -25,10 +25,10 @@ h1 {
 }
 
 h2 {
-	text-align: center;
+	text-align: left;
 	margin: auto;
 	font-size: 2vw;
-	color: white;
+	color: black;
 }
 
 .menuLink {
@@ -70,7 +70,7 @@ a:visited {
 	margin-right: 10%;
 	margin-bottom: 1.5%;
 	color: black;
-	text-align: center;
+	text-align: left;
 	align-items: center;
 }
 
@@ -80,6 +80,11 @@ a:visited {
 	width: 100%;
 	align-items: center;
 	margin: 0%;
+}
+
+.timestamp{
+	margin-top: 0;
+	font-size: 0.5vw;
 }
 
 /*

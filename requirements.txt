@@ -3,6 +3,7 @@ peewee
 pygments
 markdown
 micawber
+beautifulsoup4
 pytumblr
 twitter
 gunicorn
