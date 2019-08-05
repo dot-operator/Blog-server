@@ -1,0 +1,9 @@
+Flask
+peewee
+pygments
+markdown
+micawber
+BeautifulSoup
+pytumblr
+twitter
+gunicorn
