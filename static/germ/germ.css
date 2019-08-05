@@ -1,0 +1,180 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	background-color: #181838;
+	font-family: Arial, serif;
+	/*overflow-y: hidden;
+	overflow-x: hidden;*/
+}
+
+.canvasContainer
+{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: 0;
+}
+
+canvas {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 0px;
+	z-index: 0;
+}
+
+.contentContainer
+{
+	position: relative;
+	width:100%;
+	left:0px;
+	right:0px;
+	top:10%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	align-items: center;
+}
+
+.viddiv{
+	position: relative;
+	display: inline;
+	margin-top: 5%;
+	margin-bottom: 600%;
+	margin-left:20%;
+	width: 60%;
+	height: 0px;
+	padding-bottom: 100%;
+}
+
+.widgetdiv{
+	position: relative;
+	display: inline;
+	margin-top: 60%;
+	margin-left:20%;
+	width: 60%;
+	height: 0px;
+	padding-bottom: 33.25%;
+}
+
+.vid{
+	z-index: 6;
+}
+
+.widget{
+	z-index: 6;
+}
+
+p {
+	text-align: center;
+	color: white;
+	font-size: 1.5em;
+	z-index: 100;
+	margin: 1.5em;
+}
+
+p a{
+	color:white;
+	z-index: 100;
+}
+
+a:visited {
+	color: white;
+}
+
+ul
+{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border: 1px solid #c2c2c2;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+li
+{
+    text-align: center;
+    display: table-row;
+}
+span
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#title {
+	position:absolute;
+	display: block;
+	width:25%;
+	margin-top: 2.25em;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 5%;
+	min-width: 5%;
+	left: 0;
+	right: 0;
+	z-index: 11;
+	image-rendering: pixelated;
+}
+
+footer {
+	text-align: center;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	color: white;
+	z-index: 20;
+	top: 98%;
+}
+
+.planet {
+	position: absolute;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	top: 80%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 20%;
+	min-height: 5%;
+	min-width: 5%;
+	z-index: 5;
+	image-rendering: pixelated;
+	
+	-webkit-animation: rotation 240s infinite linear;
+}
+
+.atmosphere {
+	position: absolute;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	top: 80%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 30%;
+	min-height: 8%;
+	min-width: 8%;
+	z-index: 4;
+	image-rendering: pixelated;
+	
+	-webkit-animation: rotation 480s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

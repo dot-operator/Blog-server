@@ -1,0 +1,41 @@
+<!doctype html>
+<head>
+	<title>Germination</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<link type="text/css" rel="stylesheet" href="static/germ/germ.css"/>
+</head>
+
+<body onresize="drawstars()" onload="drawstars()">
+	<p>A video game by <a href="http://vansul.li">Sullivan Boyd</a> and <a href="http://www.twitter.com/ciirulean">Cadence Petersen</a></p>
+	
+	<div class="canvasContainer">
+	<canvas id="stars">Your browser is several years out of date and cannot display the background correctly.</canvas>
+	</div>
+	
+	<script>
+		function drawstars(){
+			var c = document.getElementById("stars");
+			var ctx = c.getContext("2d");
+			ctx.canvas.width = window.innerWidth * 0.98;
+			ctx.canvas.height = window.innerHeight * 0.93;
+			ctx.fillStyle="#FFFFFF";
+			for (i = 0; i<512; i++){
+				ctx.fillRect(Math.random() * window.innerWidth * 0.98, Math.random() * window.innerHeight * 0.93, 4, 4);
+			}
+		}
+	</script>
+	
+	<img id="title" src="static/germ/title_menu.png">
+	<div class="contentContainer">
+		<img class="atmosphere" src="static/germ/cloud_layer.png">
+		<img class="planet" src="static/germ/planet_goliath.png">
+		
+		<iframe class="widget" src="http://store.steampowered.com/widget/428490/" frameborder="0" width="646" height="190"></iframe>
+		<iframe class="vid" width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/ermTqla9o4M" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+		<p></p>
+		
+		<footer><a href="http://vansul.li">[home]</a><br/>
+		Sullivan Boyd 2019</footer>
+	</div>
+</body>

@@ -1,0 +1,60 @@
+<!doctype html>
+<title>Germination High Scores</title>
+<style>
+body{
+	background-color: #181838;
+}
+
+h1{
+	color: rgba(112, 112, 112, 1.0);
+}
+
+p{
+	color: rgba(112, 112, 112, 1.0);
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tableentry {
+	background-color: #383868;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+	
+}
+
+
+</style>
+<body>
+<h1>Germination Scores</h1><br/><br/><br/>
+
+<table>
+{% for entry in entries|reverse %}
+	<tr><div class="tableentry">
+		<th><p>{{ entry.name }}</p></th>
+		<td>
+			<p><strong>Score: </strong>{{ entry.score }}</p>
+			<p><strong>Playtime: </strong>{{ entry.playtime }}</p>
+			<p><strong>Difficulty: </strong>{{ entry.difficulty }}</p>
+			<p><strong># of Enemies Popped: </strong>{{ entry.enemies }}</p>
+			<p><strong>Max Combo: </strong>{{ entry.maxcombo }}</p>
+			<p><strong>Hearts Collected: </strong>{{ entry.hearts }}</p>
+			<p><strong>Hearts Missed: </strong>{{ entry.heartsmissed }}</p>
+		</td>
+	</div>
+	</tr>
+{% endfor %}
+</table>
+
+</body>

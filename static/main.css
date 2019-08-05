@@ -1,0 +1,198 @@
+html { height: 100%; }
+body {
+	width: 100%;
+	min-height: 100%;
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: url("tilebg.png") repeat fixed;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.content {
+	width: 960px;
+	height: inherit;
+	margin: 0px auto;
+	background: #fff;
+	text-align: center;
+	border-style: solid;
+	border-color: #ffbde1;
+	border-width: 40px 0px 0px 0px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, .3);
+}
+
+.upper-content {
+	height: 1vh;
+	min-height: 100px;
+}
+
+#tagline {
+	display: block;
+	font-family: 'Annie Use Your Telescope', cursive;
+	margin: 30px auto;
+	text-align: center;
+}
+
+#trailer {
+	width: 960px;
+	height: 540px;
+
+}
+
+.download-widget {
+	margin-top: 30px;
+}
+
+.download-button { display: inline-block; margin: 60px auto; padding: 0; background-color: #b59; }
+.download-button-inner { display: inline-block; height: auto; padding: 14px 30px; color: #fff; font-family: 'Lato', sans-serif; font-size: 32px; font-weight: bold;}
+.download-button:hover { background-color: #d7b; }
+
+.banner-divider {
+	position: relative;
+	background: #ffbde1;
+	height: 40px;
+}
+
+.promo-container {
+	height: 428px;
+	margin-top: -40px;
+}
+
+.promo {
+	position: relative;
+	display: block;
+	height: 640px;
+	background: url("9405clipimg.png") top no-repeat;
+}
+
+.description-container {
+	position: relative;
+	padding: 20px 0px 200px 20px;
+	min-height: 800px;
+	background: #fff;
+	text-align: left;
+}
+
+.description-container a {
+	color: #bb5599;
+}
+
+.description-container-left {
+	display: inline-block;
+	vertical-align: top;
+	width: 552px;
+	margin-right: 20px;
+}
+
+.description-container-left h2 {
+	margin: 0.5em 0;
+	font-family: 'Lato', sans-serif;
+}
+
+.description-container-left h3 {
+	margin: 0.5em 0;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.17em;
+}
+
+.description-container-right {
+	float: right;
+	width: 347px;
+}
+
+.description-container-right img {
+	display: block;
+	margin-bottom: 10px;
+	max-width: 100%;
+}
+
+.description-container p {
+	line-height: 1.4;
+	display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+.description-container hr {
+	margin: 1em 0;
+	border: 0;
+	height: 1px;
+	background: #dadada;
+}
+
+.description-container ul {
+	line-height: 1.4;
+	padding-left: 2.0em;
+}
+
+.footer {
+	background: #222;
+	height: 40px;
+}
+
+.footer-content {
+	line-height: 40px;
+	width: 960px;
+	height: inherit;
+	margin: auto;
+	color: #fff;
+}
+
+.footer-content a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+.footer-content img {
+	vertical-align: top;
+	margin-top: 4px;
+}
+
+.footer-content p {
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+	font-weight: 300;
+	letter-spacing: 2px;
+}
+
+.sticker-container {
+	position: absolute;
+	bottom: 60px;
+	margin: 0px 60px;
+}
+
+.sticker-container.left {
+	left: 0px;
+}
+
+.sticker-container.right {
+	right: 0px;
+}
+
+.sticker {
+	display: inline-block;
+	position: relative;
+}
+
+.sticker img {
+	position: relative;
+	margin: 0px 20px;
+}

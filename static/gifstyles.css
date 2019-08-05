@@ -1,0 +1,124 @@
+*{
+	background-color:#6A6A6A;
+	text-align: center;
+}
+
+@font-face {
+ font-family: caviar;
+ font-style:  normal;
+ font-weight: normal;
+ src: url('text.ttf');
+ }
+
+h1{
+	margin-top:1em;
+	margin-bottom:0.45em;
+	color:#C9C8C8;
+	font-family:caviar-ie, caviar, Arial, sans-serif;
+	font-size:2.7em;
+	src: url("text.tff");
+}
+
+#prev{
+	position: fixed;
+	left:0;
+	border-radius: 10%
+	border: 0px solid black;
+	display: block;
+	width: 8em;
+	height: 2em;
+	margin-bottom: 0.3em;
+	margin-top: 0.3em;
+}
+
+#moveLink{
+	color:#C9C8C8;
+	font-family:caviar-ie, caviar, Arial, sans-serif;
+	src: url("text.ttf");
+	font-size:1.5em;
+}
+
+#next{
+	position: fixed;
+	right:0;
+	border-radius: 10%
+	border: 0px solid black;
+	display: block;
+	width: 8em;
+	height: 2em;
+	margin-bottom: 0.3em;
+	margin-top: 0.3em;
+}
+
+#photoframe{
+	background-color:#323232;
+	position: relative;
+	display: inline-block;
+	height: 12em;
+	width: 12em;
+	border-radius: 10%;
+	border: 2px solid black;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+div img{
+	border-radius: 10%;
+	margin-top:0.6em;
+	margin-bottom:0.6em;
+	height: 9em;
+	width: 9em;
+}
+
+div p{
+	background-color:#323232;
+	color:#989898;
+	display:inline;
+	font-size:1.5em;
+	font-family:caviar-ie, caviar, Arial, sans-serif;
+	src: url(text.tff);
+}
+
+#trashcan{
+	margin-right:0.5em;
+	float:right;
+	border-radius:15%;
+	height: 1em;
+	width: 1em;
+	background-color:323232;
+	display:inline;
+};
+
+footer{
+	display: block;
+	border-radius: 10%;
+	border: 2px solid black;
+	display: block;
+	margin-top:1.45em;	
+	background-color:black;
+}
+
+footer p{
+	border: 1px solid black;
+	border-radius:10%;
+	background-color:black;
+	color:#989898;
+	font-weight:bold;
+	font-family:caviar-ie, caviar, Arial, sans-serif;
+	src: url(text.tff);
+	font-size:1.3em;
+}
+
+footer p *{
+	color:#C9C8C8;
+	background-color:black;
+	font-weight:bold;
+	font-family:caviar-ie, caviar, Arial, sans-serif;
+}
+
+p{
+	color:#C9C8C8;
+	font-weight:bold;
+	font-family:caviar-ie, caviar, Arial, sans-serif;
+	font-size:5em;
+}

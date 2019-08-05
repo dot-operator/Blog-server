@@ -1,0 +1,67 @@
+<!doctype html>
+<head>
+	<title>Sullivan Boyd - Sound Designer, Programmer, Musician</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<link type="text/css" rel="stylesheet" href="static/home.css"/>
+</head>
+
+<body>
+	<div id="head">
+		<h1>Sullivan Boyd</h1>
+		<h2>Sound Design - Programming - Music</h2>
+	</div>
+	
+	<div class="contentContainer">
+		<div class="listing">
+			<a href="https://store.steampowered.com/app/428490/Germination/" target="_blank">
+				<img class="listingimage" src="static/germ_title.png">
+			</a>
+			<p><strong>GERMINATION</strong> -- <i>An astronaut has crash-landed on an alien planet, and it's started to rain... seeds.</i> I designed and built this arcade-style indie game. Walk around a planet little-prince style to avoid or defeat the increasingly treacherous flora and go for the highest score.</p>
+			<ul>
+				<li><strong>Programming</strong> - I wrote the whole game in C++, using SFML for graphics and input and FMOD for sounds and music. I also made a fair number of OpenGL for assorted shaders, mostly for gameplay effects but also to generate the game's starfield background.</li>
+				<li><strong>Sound Design</strong> - I recorded and layered a series of stomps, slaps, and breaking and scraping glass to emphasize important game events. I also made a bunch of synthetic sounds in Ableton Live. The whole thing was mixed together in FMOD Studio's editor, with a model for spatializing the sound to go with the way the camera sees the tiny planet. In FMOD, I also added various compression, reverb, and filtering to make the whole game's audio cohesive.</li>
+				<li><strong>Game Design</strong> - My favorite contribution to the gameplay is the combo system and its rewards I designed: stomping on each enemy increases a combo (and your score multiplier) that unlocks more visibility, faster movement, and eventually a shield and ultimate attack. It's an effective way to award advanced techniques to experience players looking for the highest score without overwhelming beginners with all of the systems. Beware - losing your combo will drop all of your rewards, but they can easily be earned back. I also designed the procedural spawn-wave system, and all of the moment-to-moment gameplay like how the player, the camera, and the planet all move, and how they work together.</li>
+				<li><strong>Music</strong> - I composed layered music with a few effects (mostly filtering and compression) implemented in realtime with FMOD Studio. Each enemy type has its own layer that becomes more prominent in its own unique way (e.g. through volume, shuffling more intense clips, or by generating different note sequences) whenever there's more of that enemy type. The background layer is primarily percussion that builds in intensity through a series of layers as the player progresses before backing off almost entirely for an unearthly boss battle. It's a mix of genres, with elements of noir jazz, IDM, and old sci-fi movie music.</li>
+			</ul>
+		</div>
+		
+		<div class="listing">
+			<a href="https://www.moddb.com/mods/portal-alive-kicking" target="_blank">
+				<img class="listingimage" src="static/aak_title.png">
+			</a>
+			<p><strong>Portal: Alive & Kicking</strong> -- A remake of Valve's Portal using the Portal 2 engine; we were given access to the game's source code to make any changes needed.
+			<ul>
+				<li><strong>Programming</strong> - I added features to the aging sound engine and programmed the AI for the rocket turret enemy. I also modified the menu UI.</li>
+				<li><strong>Music</strong> - I wrote nearly a half hour of interactive music using the existing sound scripting system along with the additions I made to the engine. Like Portal 2, a lot of the music is diegetic -- it's "in the world" as opposed to just an ambience.</li>
+			</ul>
+		</div>
+		
+		<div class="listing">
+			<a href="https://www.moddb.com/mods/portal-2-eidolon" target="_blank">
+				<img class="listingimage" src="static/eidolon_title.png">
+			</a>
+			<p><strong>Portal 2: Eidolon</strong>
+			<ul>
+				<li><strong>Sound Design</strong> - I reimagined some of the more common gameplay sounds in Portal 2 with a less synthetic vibe; eg the Portals' ambient sounds are replaced with a soft gust of wind. I created a new soundtrack that follows Portal 2's example of having diegetic music linked to major gameplay elements.</li>
+				<li><strong>Level Design</strong> - I built five puzzle levels for Portal 2 for this mod. Instead of the boxy shapes of the original levels, these use abstract solids to suggest real buildings in an empty void.</li>
+			</ul>
+		</div>
+		
+		<div class="listing">
+				<img class="listingimage" src="static/misc_title.png">
+			<p><strong>Other Projects</strong>
+			<ul>
+				<li><strong>Viperware</strong> - A bizarre but surprisingly playable combination of Metal Gear and the classic arcade game Snake that I programmed.</li>
+				<li><strong>Foley and Music: Rescoring The Thief (1952)</strong> - I wrote a new score for the Cold War silent spy film. In the process, I recorded new foley to replace old effects, some of which were intermingled with the old music, as well as adding new ones to the some of the fully-silent portions of the film.</li>
+			</ul>
+		</div>	
+	</div>
+
+	<footer><div>
+	<a class="menuLink" href="static/SullivanB_thesis.pdf" target="_blank">[thesis]</a><br/>
+	<a class="menuLink" href="static/SullivanB_resume.pdf" target="_blank">[resume]</a><br/>
+	<a class="menuLink" href="http://vansul.li">[home]</a><br/>
+	<p>Sullivan Boyd 2019</p>
+	</div></footer>
+</body>
