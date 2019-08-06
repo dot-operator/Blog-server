@@ -84,19 +84,10 @@ a:visited {
 
 .timestamp{
 	margin-top: 0;
-	font-size: 0.5vw;
+	font-size: 0.75vw;
 }
 
-/*
-ul
-{
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    border: 1px solid #c2c2c2;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}*/
+
 li
 {
     text-align: left;
@@ -116,6 +107,7 @@ footer {
 	margin-bottom: 0;*/
 	
 	position: fixed;
+	margin-top: 10%;
 	margin-left: 2.5vh;
 	max-width: 20%;
 }

@@ -11,9 +11,11 @@
 </head>
 
 <body>
-	<div id="head">
-		<h1>Sullivan Boyd</h1>
-	</div>
+	<!--
+		<div id="head">
+			<h1>Sullivan Boyd</h1>
+		</div>
+	-->
 	
 	<div class="contentContainer">
 		{% for category, message in get_flashed_messages(with_categories=true) %}
@@ -32,10 +34,10 @@
 	</div>
 
 	<footer><div>
-	<a class="menuLink" href="/">[home]</a><br/>
-	<a class="menuLink" href="/about/">[about]</a><br/>
+	<a class="menuLink" href="/"><strong>[Sullivan Boyd]</strong></a><br/>
+	<a class="menuLink" href="{{ url_for('static', filename='about.html') }}">[about]</a><br/>
 	<a class="menuLink" href="/projects/">[projects]</a></br>
 	<a class="menuLink" href="{{ url_for('static', filename='SullivanB_resume.pdf') }}" target="_blank">[resume]</a><br/>
-	<p>   Sullivan Boyd 2019</p>
+	<p class="timestamp">Sullivan Boyd 2019</p>
 	</div></footer>
 </body>

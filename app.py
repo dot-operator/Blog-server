@@ -194,7 +194,7 @@ def not_found(exc):
 
 def main():
     database.create_tables([Entry, FTSEntry])
-    app.run(debug = True)
+    app.run(debug = True, ssl_context='adhoc')
 
 if __name__ == '__main__':
     main()
