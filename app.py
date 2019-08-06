@@ -31,9 +31,21 @@ database = flask_db.database
 oembed_providers = bootstrap_basic(OEmbedCache())
 
 
+
+# Projects Dict
+projectArr = [
+    "germination",
+	"aliveandkicking",
+	"music",
+	
+	"etc"
+]
+
+
 class Entry(flask_db.Model):
     title = CharField()
     slug = CharField(unique=True)
+    tags = CharField(default='etc')
     content = TextField()
     published = True
     timestamp = DateTimeField(default=datetime.datetime.now, index=True)
@@ -90,6 +102,10 @@ class Entry(flask_db.Model):
                 (Entry.published == True) & (FTSEntry.match(search)))
             .order_by(SQL('score')))
 
+    @classmethod
+    def searchTags(cls, query):
+        return ( Entry.select().where( Entry.tags == query ) )
+
 
 class FTSEntry(FTSModel):
     content = SearchField()
@@ -135,21 +151,32 @@ def index():
         query = Entry.public().order_by(Entry.timestamp.desc())
     return object_list('index.html', query, search = search_query)
 
+@app.route('/projects/<project>')
+def projects(project):
+    if project in projectArr:
+        return object_list('projects/' + project + '.html', Entry.searchTags(project).order_by(Entry.timestamp.desc()), paginate_by=5)
+    return render_template('projects/projects.html')
+
+@app.route('/projects/')
+def project():
+    return render_template('projects/projects.html')
+
 @app.route('/create/', methods=['GET', 'POST'])
 @login_required
 def create():
     if request.method == "POST":
-        if request.form.get('title') and request.form.get('content'):
+        if request.form.get('title') and request.form.get('content') and request.form.get('tags'):
             entry = Entry.create(
                 title=request.form['title'],
-                content = request.form['content'])
+                content = request.form['content'],
+				tags = request.form['tags'])
             flash("Blog post created successfully.", 'success')
             if entry.published:
                 return redirect(url_for('post', slug=entry.slug))
             else:
                 return redirect(url_for('edit', slug=entry.slug))
         else:
-            flash("Title and content are required.", 'danger')
+            flash("Title, tags, and content are required.", 'danger')
     return render_template('create.html')
 
 @app.route('/<slug>/edit/', methods=['GET', 'POST'])
@@ -194,7 +221,7 @@ def not_found(exc):
 
 def main():
     database.create_tables([Entry, FTSEntry])
-    app.run(debug = True, ssl_context='adhoc')
+    app.run()
 
 if __name__ == '__main__':
     main()
