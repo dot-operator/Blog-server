@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
-{% block title %}Sullivan Boyd - Germination{% endblock %}
+{% block title %}Sullivan Boyd - Alive & Kicking{% endblock %}
 
-{% block content_Title %}Germination{% endblock %}
+{% block content_Title %}Portal: Alive & Kicking{% endblock %}
 
 {% block content %}
 	<img src="{{ url_for('static', filename='germ_title.png') }}" class="listingimage"/>
@@ -17,5 +17,13 @@
 	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ouIuunKJI4w?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 	<br/><h2>Updates to Germination:</h2>
-	
+	{% for entry in object_list %}
+		<h2>
+			<a href="{% if entry.published %}{{ url_for('post', slug=entry.slug) }}{% else %}{{ url_for('edit', slug=entry.slug) }}{% endif %}">
+				{{ entry.title }}
+			</a>
+		</h2>
+		<p class="timestamp">Last edited {{ entry.timestamp.strftime(('%m/%d/%Y at %G:%I%p')) }}</p><br/><br/>
+	{% endfor %}
+	{% include "includes/pagination.html" %}
 {% endblock %}

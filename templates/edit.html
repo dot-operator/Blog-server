@@ -11,6 +11,7 @@
 		<p>CONTENT:</p><textarea rows="10" cols="80" name=content>
 			{{ request.form.get('content', entry.content) }}
 		</textarea></br>
+		<p>TAGS:</p><input type=text name="tags" value="{{ request.form.get('tags', entry.tags) }}"></br>
 		<input type=submit value=Upload>
 </p></form>
 {% endblock %}

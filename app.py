@@ -104,7 +104,7 @@ class Entry(flask_db.Model):
 
     @classmethod
     def searchTags(cls, query):
-        return ( Entry.select().where( Entry.tags == query ) )
+        return ( Entry.select().where(Entry.tags == query) )
 
 
 class FTSEntry(FTSModel):
@@ -154,6 +154,7 @@ def index():
 @app.route('/projects/<project>')
 def projects(project):
     if project in projectArr:
+        #return render_template('projects/' + project + '.html')
         return object_list('projects/' + project + '.html', Entry.searchTags(project).order_by(Entry.timestamp.desc()), paginate_by=5)
     return render_template('projects/projects.html')
 
@@ -187,6 +188,7 @@ def edit(slug):
         if request.form.get('title') and request.form.get('content'):
             entry.title = request.form['title']
             entry.content = request.form['content']
+            entry.tags = request.form['tags']
             entry.save()
             
             flash('Blog post saved.', 'success')
