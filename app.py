@@ -223,7 +223,7 @@ def not_found(exc):
 
 def main():
     database.create_tables([Entry, FTSEntry])
-    app.run(host='0.0.0.0', port=80, debug=True)
+    app.run(host='0.0.0.0', port=443, debug=True, ssl_context=('../fullchain.pem', '../privkey.pem'))
 
 if __name__ == '__main__':
     main()
