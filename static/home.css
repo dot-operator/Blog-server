@@ -31,8 +31,13 @@ h1 {
 h2 {
 	text-align: left;
 	margin: auto;
+	margin-bottom: 0;
 	font-size: 3.em;
 	color: #E6E6E6;
+}
+
+p {
+	margin: auto;
 }
 
 .menuLink {
@@ -54,7 +59,7 @@ a:visited {
 .contentContainer
 {
 	position: absolute;
-	left:0px;
+	left:3vw;
 	right:0px;
 	top: 13vw;
 	display: flex;
@@ -68,7 +73,7 @@ a:visited {
 	display: block;
 	background-color: #39393A;
 	margin-left: 22%;
-	margin-right: 5%;
+	margin-right: 1%;
 	margin-bottom: 1.5%;
 	color: #E6E6E6;
 	text-align: left;
@@ -88,6 +93,9 @@ a:visited {
 	font-size: 0.75vw;
 }
 
+blockquote{
+	font-family: Monaco, monospace;
+}
 
 li
 {
@@ -110,5 +118,5 @@ footer {
 	position: fixed;
 	top: 13vw;
 	margin-left: 2.5vh;
-	max-width: 20%;
+	max-width: 23%;
 }
