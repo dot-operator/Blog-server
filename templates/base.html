@@ -11,11 +11,9 @@
 </head>
 
 <body>
-	<!--
-		<div id="head">
-			<h1>Sullivan Boyd</h1>
-		</div>
-	-->
+	<div id="head">
+		<h1>(Programmer | Composer)</h1>
+	</div>
 	
 	<div class="contentContainer">
 		{% for category, message in get_flashed_messages(with_categories=true) %}
@@ -36,7 +34,8 @@
 	<footer><div>
 	<a class="menuLink" href="/"><strong>[Sullivan Boyd]</strong></a><br/>
 	<a class="menuLink" href="{{ url_for('static', filename='about.html') }}">[about]</a><br/>
-	<a class="menuLink" href="/projects/">[projects]</a></br><br/>
+	<!-- a class="menuLink" href="/projects/">[projects]</a></br> -->
+	<p class="menuLink" href="https://github.com/dot-operator">[GitHub]</a></br></br>
 	<p class="timestamp">Sullivan Boyd 2019</p>
 	</div></footer>
 </body>
