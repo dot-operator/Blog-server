@@ -19,6 +19,7 @@ html, body {
 }
 
 h1 {
+	font-family: Monaco, monospace;
 	color: #E6E6E6;
 	text-align: center;
 	margin: 0.25em;
