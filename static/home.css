@@ -4,6 +4,9 @@ html, body {
 	margin: 0px;
 	font-size: 100%;
 	font-family: Arial, serif;
+	background-color: #39393A;
+	color: #E6E6E6;
+	font-size: 1.2em;
 	/*overflow-y: hidden;
 	overflow-x: hidden;*/
 }
@@ -11,42 +14,41 @@ html, body {
 #head {
 	display: block;
 	width: 100%;
-	background-color: #282828;
+	background-color: #39393A;
 	margin-bottom: 3em;
 }
 
 h1 {
-	color: white;
+	color: #E6E6E6;
 	text-align: center;
 	margin: 0.25em;
 	margin-top: 0em;
 	margin-bottom: 0;
-	font-size: 5vw;
+	font-size: 3.3em;
 }
 
 h2 {
 	text-align: left;
 	margin: auto;
-	font-size: 2vw;
-	color: black;
+	font-size: 3.em;
+	color: #E6E6E6;
 }
 
 .menuLink {
+	font-size: 2em;
 	text-align: center;
-	margin-left:0.25vw;
-	min-height: 
 }
 
 a{
 	text-align: center;
 	text-decoration: none;
-	font-size:2vw;
-	color: black;
+	font-size: 2vw;
+	color: #FF8552;
 	z-index: 99;
 }
 
 a:visited {
-    color: black;
+    color: #FF8552;
 }
 
 .contentContainer
@@ -64,12 +66,11 @@ a:visited {
 .listing{
 	position: relative;
 	display: block;
-	width:50vw;
-	background-color: white;
-	margin-left: 10%;
-	margin-right: 10%;
+	background-color: #39393A;
+	margin-left: 22%;
+	margin-right: 5%;
 	margin-bottom: 1.5%;
-	color: black;
+	color: #E6E6E6;
 	text-align: left;
 	align-items: center;
 }

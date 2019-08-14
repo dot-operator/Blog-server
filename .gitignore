@@ -1,1 +1,4 @@
 blog/**
+templates/create.html
+templates/edit.html
+templates/login.html
