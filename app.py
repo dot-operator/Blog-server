@@ -14,6 +14,7 @@ from micawber.cache import Cache as OEmbedCache
 from peewee import *
 from playhouse.flask_utils import FlaskDB, get_object_or_404, object_list
 from playhouse.sqlite_ext import *
+from flask_sslify import SSLify
 
 APP_DIR = os.path.dirname(os.path.realpath(__file__))
 ADMIN_PASSWORD = ' ASS_WORD'
@@ -24,6 +25,7 @@ SITE_WIDTH = 1000
 
 app = Flask(__name__)
 app.config.from_object(__name__)
+sslify = SSLify(app)
 
 flask_db = FlaskDB(app)
 database = flask_db.database
