@@ -4,37 +4,40 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-	<link type="text/css" rel="stylesheet" href={{ url_for('static', filename='home.css') }}/>
+	<link type="text/css" rel="stylesheet" href={{ url_for('static', filename='base.css') }}/>
 	<meta name="robots" content="follow">
 	{% block extra_head %}{% endblock %}
 	{% block extra_scripts %}{% endblock %}
 </head>
 
 <body>
-	<div id="head">
-		<h1>SullivanBoyd = (Programmer | Composer)</h1>
-	</div>
-	
-	<div class="contentContainer">
-		{% for category, message in get_flashed_messages(with_categories=true) %}
-			<div class="alert alert-{{ category }} alert-dismissable">
-				<p>{{ message }}</p>
-			</div>
-		{% endfor %}
-		<div class="listing">
-			{% block page_header %}
-				<h2>{% block content_title %}{%endblock %}</h2>
-			{% endblock %}
-		
-			{% block content %}{% endblock %}
+	<div class="wrapper">
+		<div class="header">
+			<h1>Sullivan Boyd</h1>
 		</div>
-	</div>
+		
+		<div class="main">
+			{% for category, message in get_flashed_messages(with_categories=true) %}
+				<div class="alert alert-{{ category }} alert-dismissable">
+					<p>{{ message }}</p>
+				</div>
+			{% endfor %}
+			<div class="listing">
+				{% block page_header %}
+					<h1>{% block content_title %}{%endblock %}</h1>
+				{% endblock %}
+			
+				{% block content %}{% endblock %}
+			</div>
+		</div>
 
-	<footer><div>
-	<a class="menuLink" href="/"><strong>[Sullivan Boyd]</strong></a><br/>
-	<a class="menuLink" href="{{ url_for('static', filename='about.html') }}">[about]</a><br/>
-	<!-- a class="menuLink" href="/projects/">[projects]</a></br> -->
-	<a class="menuLink" href="https://github.com/dot-operator">[github]</a></br>
-	<p class="timestamp">Sullivan Boyd 2019</p>
-	</div></footer>
+		<div class="navigation">
+			<a class="navLink" href="/"><strong>Sullivan Boyd</strong></a><br/>
+			<a class="navLink" href="{{ url_for('static', filename='about.html') }}">about</a><br/>
+			<!-- a class="navLink" href="/projects/">[projects]</a></br> -->
+			<a class="navLink" href="https://github.com/dot-operator">github</a></br>
+			<!-- <p class="timestamp">Sullivan Boyd 2019</p> -->
+		</div>
+	
+	</div>
 </body>

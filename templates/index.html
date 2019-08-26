@@ -5,6 +5,7 @@
 {% block content_Title %}{% if search %}Search "{{ search }}"{% else %}Blog Entries{% endif %}{% endblock %}
 
 {% block content %}
+	<h1>Recent Posts:</h1><br/>
 	{% for entry in object_list %}
 		<h2>
 			<a href="{% if entry.published %}{{ url_for('post', slug=entry.slug) }}{% else %}{{ url_for('edit', slug=entry.slug) }}{% endif %}">
