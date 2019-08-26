@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Recent Blog Posts{% endblock %}
+
+{% block content_Title %}{% if search %}Search "{{ search }}"{% else %}Blog Entries{% endif %}{% endblock %}
+
+{% block content %}
+	<h1>Recent Posts:</h1><br/>
+	{% for entry in object_list %}
+		<h2>
+			<a href="{% if entry.published %}{{ url_for('post', slug=entry.slug) }}{% else %}{{ url_for('edit', slug=entry.slug) }}{% endif %}">
+				{{ entry.title }}
+			</a>
+		</h2>
+		<p class="timestamp">Last edited {{ entry.timestamp.strftime(('%m/%d/%Y at %G:%I%p')) }}</p><br/><br/>
+	{% endfor %}
+	
+	{% include "includes/pagination.html" %}
+{% endblock %}
