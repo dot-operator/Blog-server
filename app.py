@@ -38,6 +38,7 @@ oembed_providers = bootstrap_basic(OEmbedCache())
 projectArr = [
     "germination",
 	"aliveandkicking",
+    "pipegame",
 	"music",
 	
 	"etc"
@@ -153,11 +154,20 @@ def index():
         query = Entry.public().order_by(Entry.timestamp.desc())
     return object_list('index.html', query, search = search_query)
 
+@app.route('/blog')
+def recentposts():
+    search_query = request.args.get('q')
+    if search_query:
+        query = Entry.search(search_query)
+    else:
+        query = Entry.public().order_by(Entry.timestamp.desc())
+    return object_list('index.html', query, search = search_query)
+
 @app.route('/projects/<project>')
 def projects(project):
     if project in projectArr:
-        #return render_template('projects/' + project + '.html')
-        return object_list('projects/' + project + '.html', Entry.searchTags(project).order_by(Entry.timestamp.desc()), paginate_by=5)
+        return render_template('projects/' + project + '.html')
+        # return object_list('projects/' + project + '.html', Entry.searchTags(project).order_by(Entry.timestamp.desc()), paginate_by=5)
     return render_template('projects/projects.html')
 
 @app.route('/projects/')

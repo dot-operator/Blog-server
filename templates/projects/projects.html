@@ -5,11 +5,16 @@
 {% block content_Title %}Projects{% endblock %}
 
 {% block content %}
-	<a href="/projects/germination"><img src="{{ url_for('static', filename='germ_title.png') }}" class="listingimage"/>
-		<p>An independant game I sold on Steam, made in C++. An arcade-style platformer situated around a tiny planet.</p>
+	<a href="/projects/germination" class="projectentry">
+		<img src="{{ url_for('static', filename='germ_title.png') }}">
+		<h2>GERMINATION</h2>
 	</a>
 	<br/><br/><br/>
 	<a href="/projects/aak"><img src="{{ url_for('static', filename='aak_title.png') }}" class="listingimage"/>
 		<p>A remake of Valve's <em>Portal</em> using their Portal 2 engine. I programmed and composed music for it.</p>
+	</a>
+	<br/><br/><br/>
+	<a href="/projects/pipegame"><img src="{{ url_for('static', filename='pipegame_title.png') }}" class="listingimage"/>
+		<p></p>
 	</a>
 {% endblock %}

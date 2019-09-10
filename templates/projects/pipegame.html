@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Sullivan Boyd - Germination{% endblock %}
+
+{% block content_Title %}Germination{% endblock %}
+
+{% block content %}
+	<img src="{{ url_for('static', filename='germ_title.png') }}" class="listingimage"/>
+	<p>
+		I wrote Germination in C++, using SFML for graphics and FMOD Studio for sound. 
+		It released on Steam, where it makes use of the leaderboards, achievements, and friend network.
+	</p>
+	<p>I handled the programming, sounds, music, and writing. Cadence Petersen drew all of the pixel graphics.</p>
+	<p>
+		The music and sounds were produced in Ableton Live.
+	</p>
+	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ouIuunKJI4w?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<br/><h2>Updates to Germination:</h2>
+	
+{% endblock %}
