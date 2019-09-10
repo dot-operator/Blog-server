@@ -77,6 +77,10 @@ a {
 	font-size:48px;
 }
 
+.header > * {
+	text-align: center;
+}
+
 .fakeheader {
 	flex: 1 100%;
 	font-size: 48px;
