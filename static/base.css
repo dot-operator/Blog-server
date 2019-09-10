@@ -36,7 +36,7 @@ a {
 }
 
 .projectentry > * {
-	flex: 1 50%;
+	flex: 0 1 50%;
 	color: white;
 	text-decoration: none;
 	padding: 1%;
@@ -44,15 +44,19 @@ a {
 	max-height: 40%;
 }
 
-.projectentry > * :hover {
-	opacity: 90%;
+.projectentry:hover > * {
+	background-color: #222222;
+}
+
+.projectentry:hover {
+	background-color: #222222;
 }
 
 .projectentry > h1 {
-	text-align: center;
-	margin:auto;
+	margin-top:auto;
+	margin-bottom: auto;
 	color: white;
-	font-size: 4em;
+	font-size: 3em;
 }
 
 .listing > h2 {
@@ -77,14 +81,25 @@ a {
 	font-size:48px;
 }
 
-.header > * {
+.header > a {
+	color: black;
+	text-decoration: none;
+}
+
+.header > a > * {
 	text-align: center;
+	margin-top: 1%;
+	margin-bottom: 1%;
 }
 
 .fakeheader {
-	flex: 1 100%;
+	flex: 0 1 100%;
 	font-size: 48px;
 	order: 1;
+}
+
+.fakeheader > * {
+	color: white;
 }
 
 .main {
@@ -108,13 +123,25 @@ a {
 }
 
 @media only screen and (orientation: portrait), only screen and (max-width: 800px) {
-	.main { flex-basis: 100%; }
+	body {
+		width: 100%;
+		margin: 0;
+	}
+	.main { flex-basis: 100%; margin-left: 0; margin-right: 0; }
 	.navLink { position: static; }
 	.header {
 		position: static;
 	}
 
+	.fakeheader {
+		display: none;
+	}
+
 	.projectentry > * {
-		flex: 1 100%;
+		flex: 0 1 100%;
+		max-width: 100%;
+		max-height: 100%;
+		width: 100%;
+
 	}
 }

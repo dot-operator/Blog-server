@@ -5,25 +5,33 @@
 {% block content_Title %}Portal: Alive & Kicking{% endblock %}
 
 {% block content %}
-	<img src="{{ url_for('static', filename='germ_title.png') }}" class="listingimage"/>
+	<img src="{{ url_for('static', filename='aak_title.png') }}" class="listingimage"/>
 	<p>
-		I wrote Germination in C++, using SFML for graphics and FMOD Studio for sound. 
-		It released on Steam, where it makes use of the leaderboards, achievements, and friend network.
+		Portal: Alive & Kicking is a total conversion of Portal 2 to remaster the orignal game.
+		In 2017, Valve Software gave us access to the source code so that the game could reach its full potential.
 	</p>
-	<p>I handled the programming, sounds, music, and writing. Cadence Petersen drew all of the pixel graphics.</p>
+	<p>
+		As both a sound designer and sole programmer, I put extra care into creating new sound features that would give the game a distinct identity.
+		These feautres were used both by myself and by level designers adding game sounds to levels.
+		Most of these features were implemented as a result of feedback from the rest of the team, or to alleviate playtester suggestions.
+	</p>
+	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ouIuunKJI4w?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<p>
+		One of the more unique features I implemented was a loop point modulator, which allows the loop cues of a sound to change dynamically, creating a sort of granular synthesis effect.
+		Building the loop modulator feature required modifying the Source Engine's sound engine on every level, from the sound operator scripting language all the way down to the lowest-level, oldest parts of the game engine.
+		In-game, playtesters enjoyed the new music on bouncing energy balls, but were annoyed that they couldn't tell how long one would last before expiring.
+		With the new feature, I gave the energy balls an electronic glitch effect that would increase in intensity just before the ball expires.
+	</p>
+	<p>
+		I also used the game's Squirrel scripting language and state machines combined with sound scripting to automate the music score based on the player's interaction with the mechanics.
+		In some maps, the music swells as the player flings themselves into the air through a portal, while energy balls, cubes, and the portals themselves all hum along, their ambient gameplay sounds tuned to the soundtrack.
+		In others, the game uses a state machine to track which layers should sound as the player moves through a dangerous turret level.
+		A separate layer exists for the base level, the secret behind the scenes area, danger, and for defeating the turrets.
+	</p>
+	<p>I handled the programming, sounds, music, and some level design, especially for problem areas that needed scripting or IO help.
+		I also wrote descriptions for the Steam store page and produced in-world "investment videos" to play on the elevators at the beginning and end of levels.
+	</p>
 	<p>
 		The music and sounds were produced in Ableton Live.
 	</p>
-	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ouIuunKJI4w?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-	<br/><h2>Updates to Germination:</h2>
-	{% for entry in object_list %}
-		<h2>
-			<a href="{% if entry.published %}{{ url_for('post', slug=entry.slug) }}{% else %}{{ url_for('edit', slug=entry.slug) }}{% endif %}">
-				{{ entry.title }}
-			</a>
-		</h2>
-		<p class="timestamp">Last edited {{ entry.timestamp.strftime(('%m/%d/%Y at %G:%I%p')) }}</p><br/><br/>
-	{% endfor %}
-	{% include "includes/pagination.html" %}
 {% endblock %}
