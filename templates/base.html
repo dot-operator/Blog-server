@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-	<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300|Raleway:200&display=swap" rel="stylesheet"> 
 	<link type="text/css" rel="stylesheet" href={{ url_for('static', filename='base.css') }}/>
 	<meta name="robots" content="follow">
 	{% block extra_head %}{% endblock %}
@@ -33,7 +33,6 @@
 		</div>
 
 		<div class="navigation">
-			<a class="navLink" href="/"><strong>Sullivan Boyd</strong></a><br/>
 			<a class="navLink" href="{{ url_for('static', filename='about.html') }}">about</a><br/>
 			<a class="navLink" href="/blog">blog</a><br/>
 			<a class="navLink" href="/projects/">projects</a></br>
