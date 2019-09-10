@@ -32,12 +32,28 @@ a {
 	display: flex;
 	flex-flow: row wrap;
 	text-decoration: none;
+	background-color: black;
 }
 
 .projectentry > * {
 	flex: 1 50%;
+	color: white;
+	text-decoration: none;
+	padding: 1%;
+	max-width: 40%;
+	max-height: 40%;
 }
 
+.projectentry > * :hover {
+	opacity: 90%;
+}
+
+.projectentry > h1 {
+	text-align: center;
+	margin:auto;
+	color: white;
+	font-size: 4em;
+}
 
 .listing > h2 {
 	margin-bottom: 0;
@@ -53,6 +69,15 @@ a {
 }
 
 .header {
+	position: fixed;
+	background: white;
+	right: 0;
+	left: 0;
+	top: 0;
+	font-size:48px;
+}
+
+.fakeheader {
 	flex: 1 100%;
 	font-size: 48px;
 	order: 1;
@@ -81,6 +106,9 @@ a {
 @media only screen and (orientation: portrait), only screen and (max-width: 800px) {
 	.main { flex-basis: 100%; }
 	.navLink { position: static; }
+	.header {
+		position: static;
+	}
 
 	.projectentry > * {
 		flex: 1 100%;
