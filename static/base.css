@@ -26,6 +26,8 @@ a {
 
 .listing > * {
 	margin-top: 0;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .listingimage {
@@ -41,9 +43,17 @@ a {
 	color: white;
 }
 
+.indextable > div > h1 {
+	text-align: center;
+}
+
 .indextable > div {
 	flex: 0 1 30%;
 	max-width: 33.3%;
+}
+
+.about > p {
+	margin-left: 0.3em;
 }
 
 .blog > * > a {
@@ -92,8 +102,6 @@ a {
 
 .listing > p {
 	margin-bottom: 1.3em;
-	margin-left: 5%;
-	margin-right: 5%;
 }
 
 .header {
