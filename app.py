@@ -21,7 +21,7 @@ ADMIN_PASSWORD = ' ASS_WORD'
 DATABASE = 'sqliteext:///%s' % os.path.join(APP_DIR, 'blog.db')
 DEBUG = False
 SECRET_KEY = 'secret key lol'
-SITE_WIDTH = 1000
+SITE_WIDTH = 700
 
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -39,6 +39,7 @@ projectArr = [
     "germination",
 	"aliveandkicking",
     "pipegame",
+    "mods",
 	"music",
 	
 	"etc"

@@ -28,6 +28,18 @@ a {
 	margin-top: 0;
 }
 
+.indextable {
+	display: flex;
+	flex-flow: row wrap;
+	text-decoration: none;
+	background-color: #222222;
+	color: white;
+}
+
+.indextable > div {
+	flex: 0 1 33.3%;
+}
+
 .projectentry {
 	display: flex;
 	flex-flow: row wrap;
@@ -137,11 +149,14 @@ a {
 		display: none;
 	}
 
+	.indextable > div {
+		flex: 0 1 100%;
+	}
+
 	.projectentry > * {
 		flex: 0 1 100%;
 		max-width: 100%;
 		max-height: 100%;
 		width: 100%;
-
 	}
 }

@@ -8,10 +8,12 @@
 	<img src="{{ url_for('static', filename='germ_title.png') }}" class="listingimage"/>
 	<p>
 		Germination is a game about building a combo of stomps on dangerous flora on a tiny planet; it's a lot like Downwell in Super Mario Galaxy.
+	</p>
+	<p>
 		I wrote Germination in C++, using SFML for graphics and FMOD Studio for music and custom sound spatialization (more below).
 		It released to positive reviews on Steam, where it makes use of the leaderboards, achievements, and friend network.
 	</p>
-	<p>
+	<p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ouIuunKJI4w?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
 		The music has a set of layers, each with its own variety of behavior.
 		Most are linked to the number of a certain type of enemy onstage at a time.
 		As a result, the layer might adjust not only its volume but also generate completely different notes (or choose to generate more or fewer altogether).
@@ -22,9 +24,8 @@
 		When sounds are on the other side of the planet (>90 degrees difference), they're positioned in "real space" and are additionally filtered so that they sound occluded.
 		But when a gameplay sound happens in view of the player, it needs to happen in stereo, so that the player can think of it in terms of the game plane.
 	</p>
-	<p>I handled the programming, sounds, music, and writing. Cadence Petersen drew all of the pixel graphics.</p>
+	<p><strong>Responsibilities: </strong>I handled the programming, sounds, music, and writing. Cadence Petersen drew all of the pixel graphics.</p>
 	<p>
 		The music and sounds were produced in Ableton Live.
 	</p>
-	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ouIuunKJI4w?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
 {% endblock %}
