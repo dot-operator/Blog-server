@@ -1,21 +1,25 @@
 {% extends "base.html" %}
 
-{% block title %}Sullivan Boyd - Germination{% endblock %}
+{% block title %}Sullivan Boyd - UE4 Puzzle Game{% endblock %}
 
-{% block content_Title %}Germination{% endblock %}
+{% block content_Title %}UE4 Pipegame{% endblock %}
 
 {% block content %}
 	<img src="{{ url_for('static', filename='germ_title.png') }}" class="listingimage"/>
 	<p>
-		I wrote Germination in C++, using SFML for graphics and FMOD Studio for sound. 
-		It released on Steam, where it makes use of the leaderboards, achievements, and friend network.
+		Pipegame is a prototype puzzle game I made for an Interactive Music in Games course in my second year.<br>
+		It was designed to teach players some basic concepts of music theory.<br>
+		Players must guide the flow of colored fluids through pitched pipes to the exit under the constraints of the puzzle.
 	</p>
-	<p>I handled the programming, sounds, music, and writing. Cadence Petersen drew all of the pixel graphics.</p>
 	<p>
-		The music and sounds were produced in Ableton Live.
+		I wrote Pipegame in Unreal Engine 4, using both Blueprints and C++.<br>
+		It integrates FMOD Studio for all of the sound.
 	</p>
 	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ouIuunKJI4w?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-	<br/><h2>Updates to Germination:</h2>
-	
+	<p>
+		All of the game events are triggered through callbacks in the sound engine.<br>
+		For example, a series of puzzle elements (like the pipes filling), is all linked to a musical timeline such that they fit in a single measure of music.<br>
+		This allows for the player to solve the puzzle on their own time, but the solutions will always be executed musically.
+	</p>
+	<p><strong>Responsibilities: </strong>I cr.</p>
 {% endblock %}

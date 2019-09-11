@@ -151,7 +151,7 @@ a {
 	color: white;
 }
 
-.portfolio > img {
+.portfolio > * > img {
 	max-width: 80%;
 	margin-left: 1em;
 	margin-right: 1em;
