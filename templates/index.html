@@ -8,16 +8,19 @@
 	<div class="indextable">
 		<div class="about">
 			<h1>About Me</h1>
-			<p>Hey its me ur brother.</p>
+			<p>I'm Sullivan Boyd, an audio programmer in Sarasota, Florida. I like to make tools for games (especially for sound), with some additional interest in compilers and ray tracing.
+				I graduated this year with a bachelor's degree in C.S. and music from New College of Florida.</p>
 		</div>
 
 		<div class="portfolio">
-			<h1>Reent Projects</h1>
-
+			<a href="/projects">
+				<h1>Portfolio</h1>
+				<img src="{{ url_for('static', filename='aak_title.png') }}">
+			</a>
 		</div>
 
 		<div class="blog">
-		<h1>Recent Posts:</h1><br/>
+		<h1>Blog</h1><br/>
 		{% for entry in object_list %}
 			<h2>
 				<a href="{% if entry.published %}{{ url_for('post', slug=entry.slug) }}{% else %}{{ url_for('edit', slug=entry.slug) }}{% endif %}">

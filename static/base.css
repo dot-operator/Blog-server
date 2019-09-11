@@ -41,7 +41,7 @@ a {
 	max-width: 33.3%;
 }
 
-.indextable > * > a {
+.blog > * > a {
 	color: white;
 }
 
@@ -137,6 +137,10 @@ a {
 	position: fixed;
 	color: black;
 	color-visited: black;
+}
+
+.portfolio > * {
+	color: white;
 }
 
 @media only screen and (orientation: portrait), only screen and (max-width: 800px) {
