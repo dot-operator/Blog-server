@@ -16,7 +16,7 @@ a {
 	display: flex;
 	flex-flow: row wrap;
 	text-align: center;
-	font-size: 16px;
+	font-size: 18px;
 }
 
 .wrapper > * {
@@ -26,6 +26,11 @@ a {
 
 .listing > * {
 	margin-top: 0;
+}
+
+.listingimage {
+	margin-left: 25%;
+	margin-right: 25%;
 }
 
 .indextable {
@@ -86,7 +91,9 @@ a {
 }
 
 .listing > p {
-	margin-bottom: 1.25em;
+	margin-bottom: 1.3em;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .header {
@@ -140,7 +147,14 @@ a {
 }
 
 .portfolio > * {
+	text-decoration: none;
 	color: white;
+}
+
+.portfolio > img {
+	max-width: 80%;
+	margin-left: 1em;
+	margin-right: 1em;
 }
 
 @media only screen and (orientation: portrait), only screen and (max-width: 800px) {
