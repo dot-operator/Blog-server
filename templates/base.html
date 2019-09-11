@@ -17,6 +17,11 @@
 		<h1>Sullivan Boyd</h1>
 	</div>
 	<div class="wrapper">
+		<div class="navigation">
+			<a class="navLink" href="/blog">blog</a><br/>
+			<a class="navLink" href="/projects/">portfolio</a></br>
+			<a class="navLink" href="https://github.com/dot-operator" target="_blank">github</a></br>
+		</div>
 		<div class="main">
 			{% for category, message in get_flashed_messages(with_categories=true) %}
 				<div class="alert alert-{{ category }} alert-dismissable">
@@ -30,12 +35,6 @@
 			
 				{% block content %}{% endblock %}
 			</div>
-		</div>
-
-		<div class="navigation">
-				<a class="navLink" href="/blog">blog</a><br/>
-				<a class="navLink" href="/projects/">portfolio</a></br>
-				<a class="navLink" href="https://github.com/dot-operator" target="_blank">github</a></br>
 		</div>
 	</div>
 </body>
