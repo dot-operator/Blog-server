@@ -41,7 +41,7 @@ a {
 	max-width: 33.3%;
 }
 
-.indextable > * > * {
+.indextable > * > a {
 	color: white;
 }
 
@@ -156,6 +156,7 @@ a {
 
 	.indextable > div {
 		flex: 0 1 100%;
+		max-width: 100%;
 	}
 
 	.projectentry > * {

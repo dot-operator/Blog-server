@@ -162,7 +162,7 @@ def recentposts():
         query = Entry.search(search_query)
     else:
         query = Entry.public().order_by(Entry.timestamp.desc())
-    return object_list('index.html', query, search = search_query)
+    return object_list('recentposts.html', query, search = search_query)
 
 @app.route('/projects/<project>')
 def projects(project):

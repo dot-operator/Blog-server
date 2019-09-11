@@ -6,17 +6,17 @@
 
 {% block content %}
 <a href="/projects/germination" class="projectentry">
-	<img src="germ_title.png">
+	<img src="{{ url_for('static', filename='germ_title.png') }}">
 	<h1>GERMINATION</h1>
 </a>
 <br/>
 <a href="/projects/aliveandkicking" class="projectentry">
-	<img src="aak_title.png">
+	<img src="{{ url_for('static', filename='aak_title.png') }}">
 	<h1>PORTAL: ALIVE & KICKING</h1>
 </a>
 <br/>
 <a href="/projects/pipegame" class="projectentry">
-	<img src="pipegame_title.png">
+	<img src="{{ url_for('static', filename='pipegame_title.png') }}">
 	<h1>UE4 PUZZLE GAME</h1>
 </a>
 {% endblock %}
