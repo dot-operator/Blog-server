@@ -15,11 +15,47 @@
 		I wrote Pipegame in Unreal Engine 4, using both Blueprints and C++.<br>
 		It integrates FMOD Studio for all of the sound.
 	</p>
-	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ouIuunKJI4w?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/i7pmLFzyMBM?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	<p>
 		All of the game events are triggered through callbacks in the sound engine.<br>
 		For example, a series of puzzle elements (like the pipes filling), is all linked to a musical timeline such that they fit in a single measure of music.<br>
 		This allows for the player to solve the puzzle on their own time, but the solutions will always be executed musically.
 	</p>
-	<p><strong>Responsibilities: </strong>I cr.</p>
+	<div class="imageGallery">
+		<a href="#im0" class="thumb">
+			<img src="{{ url_for('static', filename='pipegame0.png') }}">
+		</a>
+		<a href="#im1" class="thumb">
+			<img src="{{ url_for('static', filename='pipegame1.png') }}">
+		</a>
+		<a href="#im2" class="thumb">
+			<img src="{{ url_for('static', filename='pipegame2.png') }}">
+		</a>
+		<a href="#im3" class="thumb">
+			<img src="{{ url_for('static', filename='pipegame3.png') }}">
+		</a>
+		<a href="#im4" class="thumb">
+			<img src="{{ url_for('static', filename='pipegame4.png') }}">
+		</a>
+	</div>
+
+	<a href="#_" class="lightbox" id="im0">
+			<img src="{{ url_for('static', filename='pipegame0.png') }}">
+	</a>
+
+	<a href="#_" class="lightbox" id="im1">
+			<img src="{{ url_for('static', filename='pipegame1.png') }}">
+	</a>
+
+	<a href="#_" class="lightbox" id="im2">
+			<img src="{{ url_for('static', filename='pipegame2.png') }}">
+	</a>
+
+	<a href="#_" class="lightbox" id="im3">
+			<img src="{{ url_for('static', filename='pipegame3.png') }}">
+	</a>
+
+	<a href="#_" class="lightbox" id="im4">
+			<img src="{{ url_for('static', filename='pipegame4.png') }}">
+	</a>
 {% endblock %}

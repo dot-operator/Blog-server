@@ -65,6 +65,7 @@ a {
 	flex-flow: row wrap;
 	text-decoration: none;
 	background-color: black;
+	transition: all .2s ease-in-out;
 }
 
 .projectentry > * {
@@ -74,6 +75,7 @@ a {
 	padding: 1%;
 	max-width: 40%;
 	max-height: 40%;
+	transition: all .2s ease-in-out;
 }
 
 .projectentry:hover > * {
@@ -163,6 +165,62 @@ a {
 	max-width: 80%;
 	margin-left: 1em;
 	margin-right: 1em;
+}
+
+/* Lightbox Thumbnails */
+.imageGallery {
+	display: flex;
+	flex-flow: row wrap;
+	margin-left: 0%;
+	margin-right: 0%;
+	justify-content: space-evenly;
+}
+
+.thumb {
+	margin-bottom: 2%;
+	margin-left: 1px;
+	margin-right: 1px;
+	background-color: #222222;
+	flex: 0 1 32%;
+	max-width: 80%;
+	min-width: 25%;
+	overflow: hidden;
+}
+
+.thumb > img {
+	background-color: #222222;
+	width: 100%;
+	height: 100%;
+	transition: all .2s ease-in-out;
+}
+
+.thumb > img:hover {
+	transform: scale(1.1);
+	opacity: 0.85;
+}
+
+/* lightbox */
+.lightbox {
+	display: none;
+	position: fixed;
+	z-index: 999;	
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.9);
+}
+
+.lightbox img {
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
+}
+
+.lightbox:target {
+	outline: none;
+	display: block;
 }
 
 @media only screen and (orientation: portrait), only screen and (max-width: 800px) {
