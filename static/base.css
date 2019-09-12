@@ -31,8 +31,7 @@ a {
 }
 
 .listingimage {
-	margin-left: 25%;
-	margin-right: 25%;
+	max-width: 80%;
 }
 
 .indextable {
@@ -113,6 +112,7 @@ a {
 	left: 0;
 	top: 0;
 	font-size:48px;
+	z-index: 900;
 }
 
 .header > a {
@@ -233,7 +233,6 @@ a {
 	.navLink { position: static; }
 	.header {
 		position: static;
-		z-index: 900;
 	}
 
 	.fakeheader {
