@@ -233,6 +233,7 @@ a {
 	.navLink { position: static; }
 	.header {
 		position: static;
+		z-index: 900;
 	}
 
 	.fakeheader {
