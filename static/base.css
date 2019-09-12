@@ -210,6 +210,7 @@ a {
 	top: 0;
 	left: 0;
 	background: rgba(0,0,0,0.9);
+	margin: 0;
 }
 
 .lightbox img {
