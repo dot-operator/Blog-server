@@ -17,7 +17,7 @@ from playhouse.sqlite_ext import *
 from flask_sslify import SSLify
 
 APP_DIR = os.path.dirname(os.path.realpath(__file__))
-ADMIN_PASSWORD = ' ASS_WORD'
+ADMIN_PASSWORD = 'put a password here'
 DATABASE = 'sqliteext:///%s' % os.path.join(APP_DIR, 'blog.db')
 DEBUG = False
 SECRET_KEY = 'secret key lol'
@@ -236,7 +236,7 @@ def not_found(exc):
 
 def main():
     database.create_tables([Entry, FTSEntry])
-    app.run(host='0.0.0.0', port=443, debug=True, ssl_context=('../fullchain.pem', '../privkey.pem'))
+    app.run(host='0.0.0.0', port=443, debug=False, ssl_context=('../fullchain.pem', '../privkey.pem'))
 
 if __name__ == '__main__':
     main()
