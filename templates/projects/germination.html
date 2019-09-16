@@ -7,26 +7,56 @@
 {% block content %}
 	<img src="{{ url_for('static', filename='germ_title.png') }}" class="listingimage"/>
 	<p>
-		Germination is a game about building a combo of stomps on dangerous flora on a tiny planet; it's a lot like Downwell in Super Mario Galaxy.
+		Germination is a game about building a combo of stomps on dangerous flora on a tiny planet; it's a lot like Downwell mixed with Super Mario Galaxy.
 	</p>
 	<p>
 		I wrote Germination in C++, using SFML for graphics and FMOD Studio for music and custom sound spatialization (more below).<br>
-		It released to positive reviews on Steam, where it makes use of the leaderboards, achievements, and friend network.
+		It released to positive reviews on <a href="https://store.steampowered.com/app/428490/Germination/">Steam,</a> where it makes use of the leaderboards, achievements, and friend network.
 	</p>
 	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ouIuunKJI4w?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
 	<p>
 		The music has a set of layers, each with its own variety of behavior.
 		Most are linked to the number of a certain type of enemy onstage at a time.<br>
 		As a result, the layer might adjust not only its volume but also generate completely different notes (or choose to generate more or fewer altogether).
-		In the trailer, for example, the distinct spooky theramin sound relates to the red floating plant enemies that hover.<br><br>
-		
+		In the trailer, for example, the distinct spooky theramin sound relates to the red floating plant enemies that hover.
+	</p>
+	<div class="imageGallery">
+		<a href="#im0" class="thumb">
+			<img src="https://steamcdn-a.akamaihd.net/steam/apps/428490/ss_57fbc6a5ac5488b6d0068b67d2f7034b5ba5b229.jpg">
+		</a>
+		<a href="#im1" class="thumb">
+			<img src="https://steamcdn-a.akamaihd.net/steam/apps/428490/ss_2febfc313f10ab9562179abe4b753841441e8cd6.jpg">
+		</a>
+		<a href="#im3" class="thumb">
+			<img src="https://steamcdn-a.akamaihd.net/steam/apps/428490/ss_4d65f01b50a274df3d54535879b9614ade1be89a.jpg">
+		</a>
+		<a href="#im4" class="thumb">
+		<img src="https://steamcdn-a.akamaihd.net/steam/apps/428490/ss_27bc57b19c050a8078cb241b1d1fd3177f05ee6c.jpg">
+		</a>
+	</div>
+	
+	<p>
 		Because of the shape of the game world (literally a circle), choosing how to position sounds in the world was important.<br>
-		I implemented a special position parameter in the sound middleware that handle it:
+		I implemented a special position parameter in the sound events that handle it:
 		When sounds are on the other side of the planet (>90 degrees difference), they're positioned in "real space" and are additionally filtered so that they sound occluded.<br>
 		But when a gameplay sound happens in view of the player, it needs to happen in stereo, so that the player can think of it in terms of the game plane.
+		Additionally, the most dangerous enemies and projectiles in the game have distinct alert sounds that are modulated based on relevant gameplay aspects, like their distance from the player.
 	</p>
-	<p><strong>Responsibilities: </strong>I handled the programming, sounds, music, and writing. Cadence Petersen drew all of the pixel graphics.</p>
-	<p>
-		The music and sounds were produced in Ableton Live.
-	</p>
+
+	<a href="#_" class="lightbox" id="im0">
+		<img src="https://steamcdn-a.akamaihd.net/steam/apps/428490/ss_57fbc6a5ac5488b6d0068b67d2f7034b5ba5b229.jpg">
+	</a>
+
+	<a href="#_" class="lightbox" id="im1">
+		<img src="{https://steamcdn-a.akamaihd.net/steam/apps/428490/ss_2febfc313f10ab9562179abe4b753841441e8cd6.jpg">
+	</a>
+
+	<a href="#_" class="lightbox" id="im3">
+		<img src="https://steamcdn-a.akamaihd.net/steam/apps/428490/ss_4d65f01b50a274df3d54535879b9614ade1be89a.jpg">
+	</a>
+
+	<a href="#_" class="lightbox" id="im4">
+		<img src="https://steamcdn-a.akamaihd.net/steam/apps/428490/ss_27bc57b19c050a8078cb241b1d1fd3177f05ee6c.jpg">
+	</a>
+	<p><strong>Responsibilities: </strong>I handled the programming, sounds/foley, music, and writing. Cadence Petersen drew all of the pixel graphics.</p>
 {% endblock %}
