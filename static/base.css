@@ -143,6 +143,10 @@ a {
 	margin-left: 1em;
 }
 
+.main > img {
+	max-width: 80%;
+}
+
 .navigation {
 	order: 2;
 	font-size: 36px;
