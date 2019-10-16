@@ -143,7 +143,7 @@ a {
 	margin-left: 1em;
 }
 
-.main > img {
+.main > p > img {
 	max-width: 80%;
 }
 
