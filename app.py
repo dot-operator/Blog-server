@@ -39,7 +39,7 @@ projectArr = [
     "germination",
 	"aliveandkicking",
     "pipegame",
-    "mods",
+    "modsmaps",
 	"music",
 	
 	"etc"
