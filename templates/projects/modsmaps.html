@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Sullivan Boyd - Mods, Maps, and UGC{% endblock %}
+
+{% block content_Title %}Mods, Maps, and UGC{% endblock %}
+
+{% block content %}
+	<img src="{{ url_for('static', filename='mods_title.png') }}" class="listingimage"/>
+	
+	<h2>Jump Discontinuity/Stealth Mod</h2>
+	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLyK0DRdbgir3Zm5H9FHrGAtnfmv2KBAAI&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+	<p>
+		I wrote a total conversion of Half-Life 2 that completely revamps the AI and player capabilities to make the game play like a stealth action game in the vein of Deus Ex, Dishonored, etc.
+		Some of the features I coded include:
+		<ul>
+			<li>3D Vision Cones for AI</li>
+			<li>Improved NPC Hearing and Smell Senses</li>
+			<li>New NPC behaviors like ringing alarms and dynamic patrol routes</li>
+			<li>Silent takedowns and drop-down assassinations</li>
+			<li>Player movement upgrades: dash teleportation and translocator</li>
+		</ul>
+	</p>
+	
+	<h2>Portal 2: Eidolon</h2>
+	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mCP83WuWAH8?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+	<p>
+		An older Portal 2 mod that introduces a new visual style. It uses Portal 2's VScript system as well as Hammer's IO to add new behavior to existing elements.
+		Highlights include:
+		<ul>
+			<li>Simple puzzle concepts new to Portal, like using angled surfaces and stacked boxes to redirect cubes.</li>
+			<li>Visuals, sounds, music, gameplay, and maps all made by one person.</li>
+		</ul>
+	</p>
+	
+	<h2>Additional Mods</h2>
+	<p>I occasionally post content I've made or contributed to on my Steam Workshop page, located <a href="https://steamcommunity.com/id/dotoperator/myworkshopfiles/">here.</a>
+{% endblock %}
